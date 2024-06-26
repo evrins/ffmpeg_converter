@@ -43,7 +43,7 @@ fn list_video_files<P: AsRef<Path>>(path: P) -> Result<Vec<String>, std::io::Err
             continue;
         }
         if let Some(ext) = path.extension() {
-            if ext != "mp4" {
+            if ext != "mp4" && ext != "mkv" {
                 continue;
             }
             if let Some(filename) = path.to_str() {
